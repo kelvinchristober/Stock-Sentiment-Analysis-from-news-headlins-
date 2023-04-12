@@ -63,4 +63,4 @@ def my_form_post():
     return render_template('form.html', final=compound1, test_data=test_data, sentiment=sentiment)
 
 if __name__ == "__main__":
-    app.run(debug=False, host="127.0.0.1", port=5002, threaded=True)
+    app.run(debug=True)
