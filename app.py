@@ -10,7 +10,7 @@ import nltk
 nltk.download('stopwords')
 
 set(stopwords.words('english'))
-app = Flask(__name__,template_folder="template")
+app = Flask(__name__)
 
 #model = pickle.load(open('model2.pkl', 'rb'))
 #cv = pickle.load(open('transform.pkl', 'rb'))
