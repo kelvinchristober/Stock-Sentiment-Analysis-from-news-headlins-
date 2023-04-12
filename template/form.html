@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>sentiment analysis</title>
+    <link rel="stylesheet" type="text/css" href="">
+  </head>
+  <body align="center" style="background-image: url(/static/news1.png);margin-top: 250px;">
+    <h1>Stock Market Sentiment Analyzer</h1>
+    <h3>Enter Text:</h3>
+    <form method="POST">
+      <input type="text" name="test_data">
+      <input type="submit" value="Submit">
+    </form>
+
+    {% if final is defined %}
+        <h3>Sentiment is:</h3>
+      <p>{{ final }}</p>
+      {% if sentiment == "positive" %}
+        <h3>Sentiment Result:</h3>
+        <p>Positive</p>
+      {% elif sentiment == "negative" %}
+        <h3>Sentiment Result:</h3>
+        <p>Negative</p>
+      {% else %}
+        <h3>Sentiment Result:</h3>
+        <p>Neutral</p>
+      {% endif %}
+    {% endif %}
+  </body>
+</html>
+
+
+
